@@ -1,0 +1,12 @@
+{
+  "title": "athena-bbb: Chemical scaffold-separated BBB classification",
+  "upload_type": "software",
+  "creators": [
+    {
+      "name": "Socodato, Renato"
+    }
+  ],
+  "license": "mit",
+  "version": "0.1.0rc5",
+  "description": "Software release candidate. Chemical scaffold-separated BBB classification. Synthetic examples; see README and INPUTS for assumptions and validation limits."
+}

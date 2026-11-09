@@ -1,0 +1,308 @@
+{
+  "protocol": "BENCHMARK_PROTOCOL.json, frozen before outcomes",
+  "upstream_commit": "75dab1cc607bb7a03f3de5c576cffd223e767844",
+  "upstream_license": "CC0-1.0",
+  "development_curation": {
+    "raw_rows": 7807,
+    "invalid_rows": 2,
+    "conflicting_rows": 0,
+    "canonical_duplicate_rows": 0,
+    "retained": 7805
+  },
+  "external_curation": {
+    "raw_rows": 175,
+    "invalid_rows": 0,
+    "conflicting_rows": 0,
+    "canonical_duplicate_rows": 0,
+    "retained": 175
+  },
+  "split": {
+    "seed": 2026,
+    "test_size": 0.25,
+    "train": 5691,
+    "holdout": 2114,
+    "grouping": "Murcko rings; exact canonical structure for acyclic molecules"
+  },
+  "external_exclusion": {
+    "canonical_overlap": 11,
+    "scaffold_overlap": 133,
+    "union_removed": 133,
+    "retained": 42
+  },
+  "internal_holdout": {
+    "n": 2114,
+    "class_counts": {
+      "1": 1268,
+      "0": 846
+    },
+    "scaffolds": 610,
+    "models": {
+      "athena_rf": {
+        "balanced_accuracy": 0.7538779634725672,
+        "roc_auc": 0.8497065425718356,
+        "brier_score": 0.15090758217077274,
+        "conditional_scaffold_bootstrap_95": {
+          "balanced_accuracy": {
+            "low": 0.7077385065735871,
+            "high": 0.8043753305849587,
+            "valid_draws": 2000
+          },
+          "roc_auc": {
+            "low": 0.8012211375569691,
+            "high": 0.898867079987013,
+            "valid_draws": 2000
+          },
+          "brier_score": {
+            "low": 0.1253381401402095,
+            "high": 0.1712832061167438,
+            "valid_draws": 2000
+          }
+        }
+      },
+      "training_prior": {
+        "balanced_accuracy": 0.5,
+        "roc_auc": 0.5,
+        "brier_score": 0.24236393820527782,
+        "conditional_scaffold_bootstrap_95": {
+          "balanced_accuracy": {
+            "low": 0.5,
+            "high": 0.5,
+            "valid_draws": 2000
+          },
+          "roc_auc": {
+            "low": 0.5,
+            "high": 0.5,
+            "valid_draws": 2000
+          },
+          "brier_score": {
+            "low": 0.22590799569059117,
+            "high": 0.2627231334374718,
+            "valid_draws": 2000
+          }
+        }
+      },
+      "scaled_logistic": {
+        "balanced_accuracy": 0.7187898516678972,
+        "roc_auc": 0.7937520042359294,
+        "brier_score": 0.176207151024202,
+        "conditional_scaffold_bootstrap_95": {
+          "balanced_accuracy": {
+            "low": 0.6592074606332086,
+            "high": 0.7855665851183106,
+            "valid_draws": 2000
+          },
+          "roc_auc": {
+            "low": 0.7284725317737186,
+            "high": 0.8561806212431513,
+            "valid_draws": 2000
+          },
+          "brier_score": {
+            "low": 0.14816084627140028,
+            "high": 0.19912097829150996,
+            "valid_draws": 2000
+          }
+        }
+      }
+    },
+    "rf_minus_baseline_paired_intervals": {
+      "training_prior": {
+        "balanced_accuracy": {
+          "low": 0.207738506573587,
+          "high": 0.3043753305849587,
+          "valid_draws": 2000
+        },
+        "roc_auc": {
+          "low": 0.3012211375569691,
+          "high": 0.39886707998701304,
+          "valid_draws": 2000
+        },
+        "brier_score": {
+          "low": -0.13118697164953075,
+          "high": -0.0619075335776888,
+          "valid_draws": 2000
+        }
+      },
+      "scaled_logistic": {
+        "balanced_accuracy": {
+          "low": 0.0013288036959109824,
+          "high": 0.07591710794391027,
+          "valid_draws": 2000
+        },
+        "roc_auc": {
+          "low": 0.021954261096557376,
+          "high": 0.10594706624918376,
+          "valid_draws": 2000
+        },
+        "brier_score": {
+          "low": -0.046532802546855385,
+          "high": -0.010622118469996424,
+          "valid_draws": 2000
+        }
+      }
+    },
+    "leave_one_test_scaffold_out": {
+      "athena_rf": {
+        "min_balanced_accuracy": 0.7431482253040493,
+        "max_balanced_accuracy": 0.7756661431284237,
+        "valid_omissions": 610
+      },
+      "training_prior": {
+        "min_balanced_accuracy": 0.5,
+        "max_balanced_accuracy": 0.5,
+        "valid_omissions": 610
+      },
+      "scaled_logistic": {
+        "min_balanced_accuracy": 0.7075293137313254,
+        "max_balanced_accuracy": 0.7383243675129014,
+        "valid_omissions": 610
+      }
+    },
+    "uncertainty_scope": "Conditional on fixed fitted models and observed scaffold groups; no training refit or cohort/species sampling uncertainty included",
+    "bootstrap_draws_without_both_classes": 0
+  },
+  "strict_external": {
+    "n": 42,
+    "class_counts": {
+      "1": 41,
+      "0": 1
+    },
+    "scaffolds": 38,
+    "models": {
+      "athena_rf": {
+        "balanced_accuracy": 0.9024390243902439,
+        "roc_auc": 0.9512195121951219,
+        "brier_score": 0.10425685823952598,
+        "conditional_scaffold_bootstrap_95": {
+          "balanced_accuracy": {
+            "low": 0.8333333333333333,
+            "high": 0.9615384615384616,
+            "valid_draws": 1275
+          },
+          "roc_auc": {
+            "low": 0.8717948717948718,
+            "high": 1.0,
+            "valid_draws": 1275
+          },
+          "brier_score": {
+            "low": 0.06058006431162899,
+            "high": 0.15662226973480006,
+            "valid_draws": 2000
+          }
+        }
+      },
+      "training_prior": {
+        "balanced_accuracy": 0.5,
+        "roc_auc": 0.5,
+        "brier_score": 0.13092486260354733,
+        "conditional_scaffold_bootstrap_95": {
+          "balanced_accuracy": {
+            "low": 0.5,
+            "high": 0.5,
+            "valid_draws": 1275
+          },
+          "roc_auc": {
+            "low": 0.5,
+            "high": 0.5,
+            "valid_draws": 1275
+          },
+          "brier_score": {
+            "low": 0.12387530231202605,
+            "high": 0.14725016012075448,
+            "valid_draws": 2000
+          }
+        }
+      },
+      "scaled_logistic": {
+        "balanced_accuracy": 0.9146341463414633,
+        "roc_auc": 0.9024390243902439,
+        "brier_score": 0.13364199608594057,
+        "conditional_scaffold_bootstrap_95": {
+          "balanced_accuracy": {
+            "low": 0.8513513513513513,
+            "high": 0.9652352008456658,
+            "valid_draws": 1275
+          },
+          "roc_auc": {
+            "low": 0.8,
+            "high": 0.9767441860465116,
+            "valid_draws": 1275
+          },
+          "brier_score": {
+            "low": 0.09288597105730183,
+            "high": 0.18542903032756028,
+            "valid_draws": 2000
+          }
+        }
+      }
+    },
+    "rf_minus_baseline_paired_intervals": {
+      "training_prior": {
+        "balanced_accuracy": {
+          "low": 0.33333333333333326,
+          "high": 0.46153846153846156,
+          "valid_draws": 1275
+        },
+        "roc_auc": {
+          "low": 0.3717948717948718,
+          "high": 0.5,
+          "valid_draws": 1275
+        },
+        "brier_score": {
+          "low": -0.07354457074656612,
+          "high": 0.027996350636588608,
+          "valid_draws": 2000
+        }
+      },
+      "scaled_logistic": {
+        "balanced_accuracy": {
+          "low": -0.06756756756756754,
+          "high": 0.039633712660028304,
+          "valid_draws": 1275
+        },
+        "roc_auc": {
+          "low": -0.04761904761904756,
+          "high": 0.15000000000000002,
+          "valid_draws": 1275
+        },
+        "brier_score": {
+          "low": -0.077010145480939,
+          "high": 0.017980213363117302,
+          "valid_draws": 2000
+        }
+      }
+    },
+    "leave_one_test_scaffold_out": {
+      "athena_rf": {
+        "min_balanced_accuracy": 0.8947368421052632,
+        "max_balanced_accuracy": 0.9125,
+        "valid_omissions": 37
+      },
+      "training_prior": {
+        "min_balanced_accuracy": 0.5,
+        "max_balanced_accuracy": 0.5,
+        "valid_omissions": 37
+      },
+      "scaled_logistic": {
+        "min_balanced_accuracy": 0.9078947368421053,
+        "max_balanced_accuracy": 0.925,
+        "valid_omissions": 37
+      }
+    },
+    "uncertainty_scope": "Conditional on fixed fitted models and observed scaffold groups; no training refit or cohort/species sampling uncertainty included",
+    "outside_training_descriptor_range": 0,
+    "core_evaluate_external": {
+      "n_external": 42,
+      "balanced_accuracy": 0.9024390243902439,
+      "brier_score": 0.10425685823952598,
+      "roc_auc": 0.9512195121951219,
+      "outside_training_descriptor_range": 0
+    },
+    "bootstrap_draws_without_both_classes": 725
+  },
+  "interpretation_limit": "Classification on heterogeneous historical B3DB labels, not validated human BBB probabilities, treatment effects or prospective validation",
+  "versions": {
+    "rdkit": "2026.9.1",
+    "scikit-learn": "1.9.1",
+    "numpy": "2.5.4"
+  }
+}

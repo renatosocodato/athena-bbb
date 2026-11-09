@@ -1,0 +1,12 @@
+include README.md INPUTS.md CHANGELOG.md LICENSE LICENSE_SCOPE.md CITATION.cff .zenodo.json
+include requirements-tested.txt VALIDATION.md
+recursive-include tests *.py
+recursive-include src *.py *.yaml *.yml *.R *.stan
+recursive-include .github *.yml
+include AUTHORSHIP.md
+
+global-exclude *.pyc *.pyo
+
+recursive-include validation *.py *.json *.md
+
+include INDEPENDENT_VALIDATION.md

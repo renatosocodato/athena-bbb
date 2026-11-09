@@ -1,0 +1,18 @@
+{
+  "status": "frozen_before_computing_outcomes",
+  "date": "2026-11-08",
+  "purpose": "Empirical software demonstration, not a clinically validated BBB predictor",
+  "upstream": "theochem/B3DB",
+  "upstream_tree": "75dab1cc607bb7a03f3de5c576cffd223e767844",
+  "development_file": "B3DB/B3DB_classification.tsv",
+  "external_file": "B3DB/B3DB_classification_external.tsv",
+  "license": "CC0-1.0, verified upstream README and LICENSE",
+  "curation": "Use all provided categorical groups. Map BBB+ to 1 and BBB- to 0. Reject missing/invalid/zero-atom SMILES and labels; remove ALL conflicting canonical-label records; collapse exact canonical duplicates. No salt stripping, tautomer merging or outcome-based exclusions.",
+  "internal_holdout": "One scaffold GroupShuffleSplit; test_size=0.25, seed=2026. Do not retry seed. Acyclic structures grouped by canonical molecule; analogous acyclic compounds can remain chemically related across partitions.",
+  "models": ["ATHENA RF, existing 100 trees and balanced class weighting", "training-prior DummyClassifier", "StandardScaler + LogisticRegression(C=1, class_weight=balanced,max_iter=2000,random_state=2026)"],
+  "external_filter": "Remove all external canonical structures OR Murcko/canonical scaffold groups overlapping the entire development corpus, including the internal holdout. Do not weaken this filter if the retained set is small or one class disappears.",
+  "metrics": ["balanced accuracy", "ROC AUC when both classes exist", "Brier score"],
+  "uncertainty": "2000 paired scaffold-cluster bootstrap draws, seed=8841. All models share each draw; one-class draws omitted only for metrics requiring both classes, with counts reported. Fixed fitted models, conditional test-set uncertainty; no refitting.",
+  "sensitivity": "Leave-one-scaffold-out influence on balanced accuracy. Report full external class counts, retained fraction and descriptor-range flags.",
+  "decision": "No performance threshold gates inclusion. Null, weak, baseline-dominated and one-class outcomes are retained. If external ROC is not estimable, say so and report why. No claim of prospective validation on data not yet existing; this is a frozen analysis of previously public data."
+}

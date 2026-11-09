@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "Please cite this software and its released version."
+type: software
+title: "athena-bbb: Chemical scaffold-separated BBB classification"
+version: 0.1.0rc5
+license: MIT
+authors:
+  - family-names: Socodato
+    given-names: Renato

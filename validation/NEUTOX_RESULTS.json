@@ -1,0 +1,157 @@
+{
+  "source_commit": "c35e6366391f74605b625fdcfdd126b7f1ac3a3f",
+  "sha256": {
+    "train": "eedfdce2f76210747d1424dba4f5b93addabeffce0fa673773fe90818ee4508f",
+    "valid": "a9b79d5affe4c4e5cbe962894c96c17b804e8a7c770973f46faeb3a3fc09c3d1",
+    "test": "aac236cb9ac46e9fa96cb8b6bc6f857e6cde9699e85be7494aca87e1679f3fcf"
+  },
+  "curation": {
+    "raw_rows": 12903,
+    "invalid_rows": 6,
+    "conflicting_rows": 23,
+    "canonical_duplicate_rows": 4635,
+    "retained": 8239
+  },
+  "excluded_overlap": 8130,
+  "excluded_unverified": 0,
+  "parent_conflict_rows": 3,
+  "retained": {
+    "molecules": 96,
+    "positive": 47,
+    "negative": 49,
+    "groups": 81,
+    "negative_groups": 36
+  },
+  "source_boundary": "Public retrospective cross-corpus test. The source files do not identify measurement provenance per row.",
+  "metrics": {
+    "n": 96,
+    "class_counts": {
+      "0": 49,
+      "1": 47
+    },
+    "scaffolds": 81,
+    "models": {
+      "athena_rf": {
+        "balanced_accuracy": 0.7171081198436822,
+        "roc_auc": 0.8391228831958316,
+        "brier_score": 0.17244873399243055,
+        "conditional_scaffold_bootstrap_95": {
+          "balanced_accuracy": {
+            "low": 0.6055993037135279,
+            "high": 0.8076604220499569,
+            "valid_draws": 2000
+          },
+          "roc_auc": {
+            "low": 0.7210828410311493,
+            "high": 0.9229459059961777,
+            "valid_draws": 2000
+          },
+          "brier_score": {
+            "low": 0.12180979410586404,
+            "high": 0.22738057028249634,
+            "valid_draws": 2000
+          }
+        }
+      },
+      "logistic": {
+        "balanced_accuracy": 0.677594442032132,
+        "roc_auc": 0.7694311767260095,
+        "brier_score": 0.19184098684929896,
+        "conditional_scaffold_bootstrap_95": {
+          "balanced_accuracy": {
+            "low": 0.5495604990583803,
+            "high": 0.7855895237221814,
+            "valid_draws": 2000
+          },
+          "roc_auc": {
+            "low": 0.6192359099574172,
+            "high": 0.8794729904147235,
+            "valid_draws": 2000
+          },
+          "brier_score": {
+            "low": 0.13495551651221613,
+            "high": 0.25857577365395523,
+            "valid_draws": 2000
+          }
+        }
+      },
+      "prior": {
+        "balanced_accuracy": 0.5,
+        "roc_auc": 0.5,
+        "brier_score": 0.27500025106151355,
+        "conditional_scaffold_bootstrap_95": {
+          "balanced_accuracy": {
+            "low": 0.5,
+            "high": 0.5,
+            "valid_draws": 2000
+          },
+          "roc_auc": {
+            "low": 0.5,
+            "high": 0.5,
+            "valid_draws": 2000
+          },
+          "brier_score": {
+            "low": 0.23404517477487027,
+            "high": 0.31252966417541866,
+            "valid_draws": 2000
+          }
+        }
+      }
+    },
+    "rf_minus_baseline_paired_intervals": {
+      "logistic": {
+        "balanced_accuracy": {
+          "low": -0.04460277688150359,
+          "high": 0.13732262307727716,
+          "valid_draws": 2000
+        },
+        "roc_auc": {
+          "low": 0.010571445386063997,
+          "high": 0.14479133198411412,
+          "valid_draws": 2000
+        },
+        "brier_score": {
+          "low": -0.057760355267561896,
+          "high": 0.01523603146323374,
+          "valid_draws": 2000
+        }
+      },
+      "prior": {
+        "balanced_accuracy": {
+          "low": 0.10559930371352788,
+          "high": 0.3076604220499569,
+          "valid_draws": 2000
+        },
+        "roc_auc": {
+          "low": 0.22108284103114934,
+          "high": 0.42294590599617765,
+          "valid_draws": 2000
+        },
+        "brier_score": {
+          "low": -0.18205183969724903,
+          "high": -0.01838128764025162,
+          "valid_draws": 2000
+        }
+      }
+    },
+    "bootstrap_draws_without_both_classes": 0,
+    "leave_one_test_scaffold_out": {
+      "athena_rf": {
+        "min_balanced_accuracy": 0.6941489361702128,
+        "max_balanced_accuracy": 0.7340425531914894,
+        "valid_omissions": 81
+      },
+      "logistic": {
+        "min_balanced_accuracy": 0.638563829787234,
+        "max_balanced_accuracy": 0.6914893617021276,
+        "valid_omissions": 81
+      },
+      "prior": {
+        "min_balanced_accuracy": 0.5,
+        "max_balanced_accuracy": 0.5,
+        "valid_omissions": 81
+      }
+    },
+    "uncertainty_scope": "Conditional on fixed fitted models and observed scaffold groups; no training refit or cohort/species sampling uncertainty included"
+  }
+}

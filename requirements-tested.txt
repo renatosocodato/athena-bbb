@@ -1,0 +1,9 @@
+# Direct runtime and test dependencies observed in the local Python 3.12 validation environment.
+# Not a cross-platform transitive lockfile.
+numpy==2.5.4
+pandas==3.1.1
+scikit-learn==1.9.1
+rdkit==2026.9.1
+joblib==1.6.0
+pillow==13.0.0
+pytest==9.2.0
